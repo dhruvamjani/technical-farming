@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Farming</title>
+	<style>
+	/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #3498db, #2ecc71, #f1c40f);
+    background-size: 300% 300%;
+    animation: gradientBackground 10s ease infinite;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem; /* Increased size for better prominence */
+    margin-top: 20px;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+    font-family: 'Montserrat', sans-serif; /* Modern bold font */
+}
+
+.box h2 {
+    font-size: 2rem; /* Increased size for section titles */
+    text-transform: uppercase; /* Titles in uppercase for emphasis */
+    margin: 10px 0;
+    color: #f1c40f; /* Bright gold color for better visibility */
+    text-align: center; /* Centered titles */
+    position: relative;
+    font-family: 'Montserrat', sans-serif; /* Consistent with main title font */
+}
+
+.box h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+p {
+    font-size: 1.2rem; /* Slightly larger for readability */
+    color: #e0e0e0; /* Softer white for contrast against the background */
+    line-height: 1.8; /* Improved spacing */
+    background-color: rgba(0, 0, 0, 0.5); /* Subtle background for better readability */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: justify; /* Justified text for a clean look */
+}
+
+ol li, ul li {
+    font-size: 1.1rem; /* Slightly larger for emphasis */
+    margin: 10px 0;
+    color: #ffffff; /* Bright color to match the background */
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+}
+
+button:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.info-box,
+.box {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+    color: #fff;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+	</style>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Homepage -->
+    <div class="homepage">
+        <h1>Automatic Weedicide Sprinkler & pH Tester</h1>
+        <div class="info-box">
+            <p>This is a science project designed to help farmers efficiently manage weeds and soil pH levels for improved crop production.</p>
+        </div>
+        <div class="box">
+            <h2>Method of Working</h2>
+            <ol>
+                <li>The soil pH tester takes two samples daily, analyzing their pH levels.</li>
+                <li>The Arduino Uno processes the data and calculates the appropriate amount of acidic or basic fertilizer to balance the soil.</li>
+                <li>Based on real-time data, the system schedules the precise timing for spraying different weedicides.</li>
+                <li>Farmers can configure the system via this interface to customize watering routines, fertilizer types, and flow rates.</li>
+            </ol>
+        </div>
+        <div class="box">
+            <h2>Advantages</h2>
+            <ul>
+                <li>Minimizes manual labor for farmers, reducing physical strain.</li>
+                <li>Enhances precision for better productivity.</li>
+                <li>Improves farmer safety by automating hazardous tasks.</li>
+                <li>Reduces waste and environmental impact.</li>
+                <li>Saves time with an integrated system for farming tasks.</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Speciality of the Project</h2>
+            <ul>
+                <li>Offers a technology-driven approach to farming.</li>
+                <li>Includes a user-friendly web interface.</li>
+                <li>Reduces health risks of manual weedicide spraying.</li>
+                <li>Promotes sustainability by ensuring efficient resource use.</li>
+                <li>Adaptable for different farm sizes and crop types.</li>
+            </ul>
+        </div>
+        <button onclick="showCodeForm()">Start</button>
+    </div>
+
+    <!-- Code Input Form -->
+    <div class="form-container code-form" style="display: none;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSff18NKCnS__ZQM6OMKBwnKj8A6OOBVKh3XgI3sn4a1pdHe8w/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+    <!-- Settings Form -->
+    <div class="form-container settings-form" style="display: none;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdw4lBDBI9ZnrVBGne-Xvm6XQGXOOf0OUjKr1e4TbiqVwimyA/viewform?embedded=true" width="640" height="1523" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+	<script>
+	// Function to show the Code Input Form
+function showCodeForm() {
+    const homepage = document.querySelector('.homepage');
+    const codeForm = document.querySelector('.code-form');
+
+    homepage.style.animation = 'fadeOut 1s ease';
+    homepage.addEventListener(
+        'animationend',
+        () => {
+            homepage.style.display = 'none'; // Hide homepage
+            codeForm.style.display = 'block'; // Show code form
+            codeForm.style.animation = 'fadeIn 1s ease'; // Apply fade-in animation
+        },
+        { once: true }
+    );
+}
+
+// Redirect to Settings Form after Code Form submission
+document.querySelector('.code-form iframe').addEventListener('load', function () {
+    const codeForm = document.querySelector('.code-form');
+    const settingsForm = document.querySelector('.settings-form');
+
+    codeForm.style.animation = 'fadeOut 1s ease';
+    codeForm.addEventListener(
+        'animationend',
+        () => {
+            codeForm.style.display = 'none'; // Hide code form
+            settingsForm.style.display = 'block'; // Show settings form
+            settingsForm.style.animation = 'fadeIn 1s ease'; // Apply fade-in animation
+        },
+        { once: true }
+    );
+});
+
+// Redirect to Homepage after Settings Form submission
+document.querySelector('.settings-form iframe').addEventListener('load', function () {
+    const settingsForm = document.querySelector('.settings-form');
+    const homepage = document.querySelector('.homepage');
+
+    settingsForm.style.animation = 'fadeOut 1s ease';
+    settingsForm.addEventListener(
+        'animationend',
+        () => {
+            settingsForm.style.display = 'none'; // Hide settings form
+            homepage.style.display = 'block'; // Show homepage
+            homepage.style.animation = 'fadeIn 1s ease'; // Apply fade-in animation
+        },
+        { once: true }
+    );
+});
+	</script>
+</body>
+</html>
